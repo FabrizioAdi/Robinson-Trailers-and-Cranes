@@ -1,2 +1,2 @@
 # Robinson Trailers Blog
-(../images/Prtscr.png)
+![](media/images/Prtscr.png)
