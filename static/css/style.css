@@ -9,5 +9,27 @@ h1 {
 	font-weight: 400;
 	color: #0f9e1b;
 	margin: 20px;
-
+	text-align: center;
 }
+
+p {
+	text-align: center;
+}
+
+.row {
+	text-align: center;
+}
+
+.row img {
+	width: 100%;
+	height: auto;
+}
+
+.row figcaption {
+	margin-top: 8px;
+}
+
+@media (max-width: 575px)
+
+
+
