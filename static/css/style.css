@@ -13,11 +13,12 @@ h1 {
 }
 
 p {
-	text-align: center;
+	text-align: justify;
 }
 
 .row {
 	text-align: center;
+
 }
 
 .row img {
@@ -27,9 +28,7 @@ p {
 
 .row figcaption {
 	margin-top: 8px;
+	color: #0f9e1b;
 }
 
 @media (max-width: 575px)
-
-
-
