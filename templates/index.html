@@ -28,49 +28,54 @@
 
             <div class="col-sm-6 col-md-4">
                 <figure>
-                    <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
-                    <figcaption>Timber Trailer</figcaption>
+                    <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644518766/259673583_1627588104248844_6227468696804068951_n_lsocnl.jpg" width="200" height="300" alt="Specially Built Trailer"></a>
+                    <figcaption>Specially Built Trailer</figcaption>
                 </figure>
                 </div>   
 
             <div class="col-sm-6 col-md-4">
                 <figure>
-                     <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
-                     <figcaption>Timber Trailer</figcaption>
+                     <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644518687/246532183_2061937120614358_2246057876422738431_n_qp1uyz.jpg" width="200" height="300" alt="Crane Muck Trailer"></a>
+                     <figcaption>Crane Muck Trailer</figcaption>
                 </figure>
                 </div>
 
                 <div class="col-sm-6 col-md-4">
                     <figure>
-                         <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
-                         <figcaption>Timber Trailer</figcaption>
+                         <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644518444/262513386_345677830762047_8341471232435239714_n_awqgfr.jpg" width="200" height="300" alt="Timber Trailer with Crane"></a>
+                         <figcaption>Timber Trailer with Crane</figcaption>
                     </figure>
                     </div>
 
                     <div class="col-sm-6 col-md-4">
                         <figure>
-                             <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
-                             <figcaption>Timber Trailer</figcaption>
+                             <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644518500/271870720_332887438702601_7164599780881248551_n_y7kry0.jpg" width="200" height="300" alt="Platform Trailer"></a>
+                             <figcaption>Platform Trailer</figcaption>
                         </figure>
                         </div>
 
                         <div class="col-sm-6 col-md-4">
                             <figure>
-                                 <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
-                                 <figcaption>Timber Trailer</figcaption>
+                                 <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644518395/271907930_1364359743995257_2300248568565420629_n_yo802d.jpg" width="200" height="300" alt="Block Crane Trailer"></a>
+                                 <figcaption>Block Crane Trailer</figcaption>
                             </figure>
                             </div>
             </div>
             </div>
-            </section>
-            </main>
-        
-    {% for post in posts %}
 
+    <div class ="col-12 mt-3 left">
+        <div class ="row">
+    {% for post in post_list %}
+        </div>
     {{post.title}}<br>
     {{post.author}}<br><br>
 
     {% endfor %}
+    </div>
+            </section>
+            </main>
+        
+    
             
 
             {%endblock%}
