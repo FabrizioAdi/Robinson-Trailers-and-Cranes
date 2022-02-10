@@ -1,4 +1,77 @@
 {% extends "base.html" %}
 
+{% block content %}
 
+<body>
 
+    <main>
+<section class = "trailers">
+
+<div class="container">
+				
+<header>
+        
+<h1>Diffrent type of Trailers</h1>
+<p>In this section we present different types of trailers with their descriptions</p>
+            
+</header>
+    
+    <div class="row">
+        
+        <div class="col-sm-6 col-md-4">
+        
+            <figure>
+                <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
+                <figcaption>Timber Trailer</figcaption>
+            </figure>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <figure>
+                    <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
+                    <figcaption>Timber Trailer</figcaption>
+                </figure>
+                </div>   
+
+            <div class="col-sm-6 col-md-4">
+                <figure>
+                     <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
+                     <figcaption>Timber Trailer</figcaption>
+                </figure>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <figure>
+                         <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
+                         <figcaption>Timber Trailer</figcaption>
+                    </figure>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <figure>
+                             <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
+                             <figcaption>Timber Trailer</figcaption>
+                        </figure>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <figure>
+                                 <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
+                                 <figcaption>Timber Trailer</figcaption>
+                            </figure>
+                            </div>
+            </div>
+            </div>
+            </section>
+            </main>
+        
+    {% for post in posts %}
+
+    {{post.title}}<br>
+    {{post.author}}<br><br>
+
+    {% endfor %}
+            
+
+            {%endblock%}
+</body>
