@@ -2,84 +2,58 @@
 
 {% block content %}
 
-<body>
-
-    <main>
-<section class = "trailers">
-
-<div class="container">
-				
-<header>
-        
-<h1>Type of Trailers</h1>
-<p>This section presents the different types of trailers.</p>
-            
-</header>
-    
+<div class="container-fluid">
     <div class="row">
-        
-        <div class="col-sm-6 col-md-4">
-        
-            <figure>
-                <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644354085/268854701_522463618719323_5220277275246151670_n_kgm1qi.jpg" width="200" height="300" alt="Timber Trailer"></a>
-                <figcaption>Timber Trailer</figcaption>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </figure>
-            </div>
 
-            <div class="col-sm-6 col-md-4">
-                <figure>
-                    <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644518766/259673583_1627588104248844_6227468696804068951_n_lsocnl.jpg" width="200" height="300" alt="Specially Built Trailer"></a>
-                    <figcaption>Specially Built Trailer</figcaption>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.></p>
-                </figure>
-                </div>   
-
-            <div class="col-sm-6 col-md-4">
-                <figure>
-                     <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644518687/246532183_2061937120614358_2246057876422738431_n_qp1uyz.jpg" width="200" height="300" alt="Crane Muck Trailer"></a>
-                     <figcaption>Crane Muck Trailer</figcaption>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </figure>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <figure>
-                         <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644518444/262513386_345677830762047_8341471232435239714_n_awqgfr.jpg" width="200" height="300" alt="Timber Trailer with Crane"></a>
-                         <figcaption>Timber Trailer with Crane</figcaption>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </figure>
-                    </div>
-
-                    <div class="col-sm-6 col-md-4">
-                        <figure>
-                             <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644518500/271870720_332887438702601_7164599780881248551_n_y7kry0.jpg" width="200" height="300" alt="Platform Trailer"></a>
-                             <figcaption>Platform Trailer</figcaption>
-                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </figure>
-                        </div>
-
-                        <div class="col-sm-6 col-md-4">
-                            <figure>
-                                 <a href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1644518395/271907930_1364359743995257_2300248568565420629_n_yo802d.jpg" width="200" height="300" alt="Block Crane Trailer"></a>
-                                 <figcaption>Block Crane Trailer</figcaption>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </figure>
+        <!-- Blog Entries Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for post in post_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in post.featured_image.url %}
+                                <img class="card-img-top"
+                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ post.author }}</p>
+                                </div>
                             </div>
+                            <a href="#" class="post-link">
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.excerpt }}</p>
+                            </a>
+                            <hr />
+                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                                {{ post.number_of_likes }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
             </div>
-            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
 
-    <div class ="col-12 mt-3 left">
-        <div class ="row">
-    {% for post in post_list %}
+            </div>
         </div>
-    {{post.title}}<br>
-    {{post.author}}<br><br>
-
-    {% endfor %}
     </div>
-</section>
-</main>
-{%endblock%}
-</body> 
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
 
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+{%endblock%}
