@@ -160,9 +160,9 @@ The Bootstrap front-end framework is used through the project. Bootstrap provide
 
 Websites, movies that I used while working on the project.
 
-[How to Create Login system](https://www.youtube.com/watch?v=1UvTNMH7zDo)
+[How to Create Login System](https://www.youtube.com/watch?v=1UvTNMH7zDo)
 
-[Simple blog App Tutorial](https://www.youtube.com/watch?v=AF4ji8bb1M8&t=3399s)
+[Simple Blog App Tutorial](https://www.youtube.com/watch?v=AF4ji8bb1M8&t=3399s)
 
 [React Blog Tutorial](https://www.youtube.com/watch?v=tlTdbc5byAs)
 
